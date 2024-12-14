@@ -8,7 +8,6 @@
 > ```powershell
 > Get-Content $PROFILE | Out-File PS_old_profile.bak
 > ```
-
 ## Installation
 
 To install the profile, run the following command:
