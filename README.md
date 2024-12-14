@@ -2,13 +2,12 @@
 
 ⌨️ This is a PowerShell profile that I use on Windows.
 
-## Backup Old Profile
-
-To backup the old profile, run the following command:
-
-```powershell
-Get-Content $PROFILE | Out-File PS_old_profile.bak
-```
+> [!IMPORTANT]
+> To backup the old profile, run the following command:
+>
+> ```powershell
+> Get-Content $PROFILE | Out-File PS_old_profile.bak
+> ```
 
 ## Installation
 
