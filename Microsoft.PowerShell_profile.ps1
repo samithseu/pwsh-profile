@@ -8,7 +8,7 @@ if (!(Get-Module -ListAvailable -Name PSReadLine)) {
 Import-Module PSReadLine
 Set-PSReadLineOption -PredictionSource History -PredictionViewStyle ListView
 
-# for `refreshenv` command to work
+# for `refreshenv` command to work for chocolatey
 $ChocolateyProfile = "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1"
 if (Test-Path($ChocolateyProfile)) {
   Import-Module "$ChocolateyProfile"
