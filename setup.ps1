@@ -29,11 +29,9 @@ function Prompt {
     if ($currentDir -eq $username) {
         $currentDir = "~"
     }
-  
     # Set colors using Write-Host and escape sequences
     $boldYellow = "Yellow"      # Bold yellow color in PowerShell
     $green = "Green"      # Green color in PowerShell
-
     # Construct the prompt
     Write-Host "┌─[" -ForegroundColor $green -NoNewline
     Write-Host "$username" -ForegroundColor $boldYellow -NoNewline
