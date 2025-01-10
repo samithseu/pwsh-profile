@@ -14,5 +14,5 @@
 To install the profile, run the following command:
 
 ```powershell
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/samithseu/pwsh-profile/main/Microsoft.PowerShell_profile.ps1" -OutFile $PROFILE
+iwr "https://raw.githubusercontent.com/samithseu/pwsh-profile/main/Microsoft.PowerShell_profile.ps1" -OutFile $PROFILE
 ```
