@@ -17,8 +17,14 @@ if (Test-Path($ChocolateyProfile)) {
 
 # setting alias
 Set-Alias cls Clear-Host
-Set-Alias fetch neofetch
 Set-Alias search es
+if (Get-Command neofetch -ErrorAction SilentlyContinue) {
+    Set-Alias -Name fetch -Value neofetch
+} elseif (Get-Command winfetch -ErrorAction SilentlyContinue) {
+    Set-Alias -Name fetch -Value winfetch
+} else {
+    Write-Host "Neither neofetch nor winfetch is installed."
+}
 
 # customize the prompt
 function Prompt {
@@ -33,11 +39,11 @@ function Prompt {
     $boldYellow = "Yellow"      # Bold yellow color in PowerShell
     $green = "Green"      # Green color in PowerShell
     # Construct the prompt
-    Write-Host "┌─[" -ForegroundColor $green -NoNewline
+    Write-Host "ΓöîΓöÇ[" -ForegroundColor $green -NoNewline
     Write-Host "$username" -ForegroundColor $boldYellow -NoNewline
     Write-Host " at " -ForegroundColor $green -NoNewline
     Write-Host "$currentDir" -ForegroundColor $boldYellow -NoNewline 
     Write-Host "]" -ForegroundColor $green
-    Write-Host "└─◉" -ForegroundColor $green -NoNewline
+    Write-Host "ΓööΓöÇΓùë" -ForegroundColor $green -NoNewline
     return " "  # Ensure the prompt ends with a space for user input
 }
