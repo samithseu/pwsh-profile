@@ -39,11 +39,11 @@ function Prompt {
     $boldYellow = "Yellow"      # Bold yellow color in PowerShell
     $green = "Green"      # Green color in PowerShell
     # Construct the prompt
-    Write-Host "ΓöîΓöÇ[" -ForegroundColor $green -NoNewline
+    Write-Host "┌─[" -ForegroundColor $green -NoNewline
     Write-Host "$username" -ForegroundColor $boldYellow -NoNewline
     Write-Host " at " -ForegroundColor $green -NoNewline
-    Write-Host "$currentDir" -ForegroundColor $boldYellow -NoNewline 
+    Write-Host "$currentDir" -ForegroundColor $boldYellow -NoNewline
     Write-Host "]" -ForegroundColor $green
-    Write-Host "ΓööΓöÇΓùë" -ForegroundColor $green -NoNewline
+    Write-Host "└─◉" -ForegroundColor $green -NoNewline
     return " "  # Ensure the prompt ends with a space for user input
 }
