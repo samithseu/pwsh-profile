@@ -31,19 +31,17 @@ function Prompt {
     # Get the current username
     $username = $env:USERNAME
     # Get the current direcotry
-    $currentDir = (Get-Location | Split-Path -Leaf)
-    if ($currentDir -eq $username) {
-        $currentDir = "~"
-    }
+    $currentDir = Get-Location
+
     # Set colors using Write-Host and escape sequences
     $boldYellow = "Yellow"      # Bold yellow color in PowerShell
     $green = "Green"      # Green color in PowerShell
     # Construct the prompt
-    Write-Host "┌─[" -ForegroundColor $green -NoNewline
+    Write-Host "╭-[" -ForegroundColor $green -NoNewline
     Write-Host "$username" -ForegroundColor $boldYellow -NoNewline
     Write-Host " at " -ForegroundColor $green -NoNewline
-    Write-Host "$currentDir" -ForegroundColor $boldYellow -NoNewline
+    Write-Host "$currentDir" -ForegroundColor $boldYellow -NoNewline 
     Write-Host "]" -ForegroundColor $green
-    Write-Host "└─◉" -ForegroundColor $green -NoNewline
+    Write-Host "╰->" -ForegroundColor $green -NoNewline
     return " "  # Ensure the prompt ends with a space for user input
 }
